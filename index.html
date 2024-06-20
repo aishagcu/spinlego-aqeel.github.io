@@ -13,11 +13,18 @@
             color: #333;
         }
         header {
-            background-color: #333;
-            color: #fff;
-            padding: 20px 0;
-            text-align: center;
-        }
+        background-color: #333;
+        color: #fff;
+        padding: 10px 0;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .logo {
+        margin-right: 15px; /* Add space between the logo and the title */
+        height: 50px; /* Adjust the height as needed */
+    }
         nav {
             text-align: center;
             margin: 10px 0;
@@ -69,6 +76,7 @@
 </head>
 <body>
     <header>
+	<img src="images/logo.png" alt="Group Logo" class="logo">
         <h1>Spintronics with Chiral Helimagnetic Insulators</h1>
         <p>Exploring spin transport properties in noncollinear magnetic materials</p>
     </header>
