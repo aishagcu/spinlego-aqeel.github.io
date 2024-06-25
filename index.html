@@ -4,70 +4,148 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Spintronics with Helimagnetic Insulators - Aisha Aqeel's Research Group</title>
-   <style>
-    /* Existing styles */
-    body {
-        font-family: Arial, sans-serif;
-        margin: 0;
-        padding: 0;
-        background-color: #f4f4f9;
-        color: #333;
-    }
-    header {
-        background-color: #333;
-        color: #fff;
-        padding: 10px 0;
-        text-align: center;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-    .logo {
-        margin-right: 15px;
-        height: 20px;
-    }
-    nav {
-        text-align: center;
-        margin: 10px 0;
-    }
-    nav a {
-        margin: 0 15px;
-        color: #333;
-        text-decoration: none;
-        font-weight: bold;
-    }
-    .container {
-        width: 80%;
-        margin: 0 auto;
-        padding: 20px;
-        background-color: #fff;
-    }
-    .section {
-        margin-bottom: 40px;
-    }
-    .section h2 {
-        border-bottom: 2px solid #333;
-        padding-bottom: 10px;
-    }
-    footer {
-        background-color: #333;
-        color: #fff;
-        text-align: center;
-        padding: 10px 0;
-        position: fixed;
-        width: 100%;
-        bottom: 0;
-    }
-    
-    /* Updated styles to remove image rounding */
-    .profile-img,
-    .team-member img,
-    .publication img {
-        border-radius: 0; /* Remove rounding */
-        width: auto; /* Keep the original width */
-        height: auto; /* Keep the original height */
-    }
-</style>
+    <style>
+        /* Existing styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .logo {
+            margin-right: 15px;
+            height: 50px;
+        }
+        nav {
+            text-align: center;
+            margin: 10px 0;
+        }
+        nav a {
+            margin: 0 15px;
+            color: #333;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            padding-bottom: 100px; /* Added padding to the bottom */
+        }
+        .section {
+            margin-bottom: 40px;
+        }
+        .section h2 {
+            border-bottom: 2px solid #333;
+            padding-bottom: 10px;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+
+        /* Updated styles for profile section */
+        .profile-section {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px; /* Add gap between text and image */
+        }
+        .profile-section .text-container {
+            flex: 1; /* Allow the text to take more space */
+        }
+        .profile-section img {
+            width: 250px; /* Set a larger width for the image */
+            height: auto; /* Maintain aspect ratio */
+            border-radius: 0; /* Ensure no rounding */
+        }
+
+        /* Styles for contact details */
+        .contact-details {
+            display: flex;
+            flex-direction: column;
+            margin-top: 20px;
+        }
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .contact-item img {
+            margin-right: 10px;
+            width: 24px;
+            height: 24px;
+        }
+
+        /* Styles for team members to ensure uniform size */
+        .team-member img {
+            width: 150px; /* Set a uniform width for team images */
+            height: auto; /* Maintain aspect ratio */
+            object-fit: cover; /* Cover the available space while maintaining aspect ratio */
+        }
+
+        /* Styles for Event & News section */
+        .events-news {
+            background-color: #f4f4f9;
+            padding: 20px;
+            margin-bottom: 40px;
+        }
+        .events-news h2 {
+            color: #4A4A4A;
+            font-size: 24px;
+            border-bottom: 2px solid #4A4A4A;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+        .event-item {
+            display: flex;
+            border-left: 4px solid #4A4A4A;
+            padding-left: 10px;
+            margin-bottom: 20px;
+        }
+        .event-date {
+            font-size: 18px;
+            font-weight: bold;
+            color: #4A4A4A;
+            margin-right: 20px;
+        }
+        .event-details {
+            flex: 1;
+        }
+        .event-title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        .event-description {
+            font-size: 14px;
+            margin-bottom: 5px;
+        }
+        .event-link {
+            font-size: 14px;
+            color: #4A4A4A;
+            text-decoration: none;
+        }
+        .event-link:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -85,11 +163,54 @@
         <a href="#contact">Contact</a>
     </nav>
     <div class="container">
+        <!-- Event & News Section -->
+        <section id="events-news" class="events-news">
+            <h2>Next Events</h2>
+            <div class="event-item">
+                <div class="event-date">July 23rd - 25th 2024</div>
+                <div class="event-details">
+                    <div class="event-title"> SPICE Workshop:</div>
+                    <div class="event-description">SPICE Workshop on Spin textures: Magnetism meets Plasmonics, <br>Ingelheim</div>
+                    <a href="https://www.spice.uni-mainz.de/tba-66/" class="event-link">Invited talk</a>
+                </div>
+            </div>
+            <div class="event-item">
+                <div class="event-date">JUN 27</div>
+                <div class="event-details">
+                    <div class="event-title">27 June 2024 - TRR 360 Sonderseminar:</div>
+                    <div class="event-description">Ultrafast spin-orbitronics with terahertz electromagnetic pulses</div>
+                    <a href="#" class="event-link">Find out more</a>
+                </div>
+            </div>
+        </section>
+
         <section id="about" class="section">
             <h2>About Us</h2>
-            <img src="profile.jpg" alt="Aisha Aqeel" class="profile-img">
-            <p>Welcome to the research group of Dr. Aisha Aqeel, Head of the Emmy Noether Research Group.</p>
-            <p>Experimental Physics IV, University of Augsburg, Germany </p>
+            <div class="profile-section">
+                <div class="text-container">
+                    <p>Welcome to the Emmy Noether research group of Dr. Aisha Aqeel at Experimental Physics IV, University of Augsburg.</p>
+                    <!-- Contact details section -->
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <img src="address-icon.png" alt="Address Icon">
+                            <span>Office: 339 (S), Lab: 226(R), Universitätsstraße 1 (Physik Süd), 86159 Augsburg, Germany</span>
+                        </div>
+                        <div class="contact-item">
+                            <img src="email-icon.png" alt="Email Icon">
+                            <span><a href="mailto:aisha.aqeel@uni-a.de">aisha.aqeel@uni-a.de</a></span>
+                        </div>
+                        <div class="contact-item">
+                            <img src="phone-icon.png" alt="Phone Icon">
+                            <span>+49 (0) 821 / 598 - 3117</span>
+                        </div>
+                        <div class="contact-item">
+                            <img src="website-icon.png" alt="Website Icon">
+                            <span><a href="https://www.uni-augsburg.de/de/fakultaet/mntf/physik/groups/exp4/team/aqeel/" target="_blank">Experimental Physics IV</a></span>
+                        </div>
+                    </div>
+                </div>
+                <img src="profile.jpg" alt="Aisha Aqeel" class="profile-img">
+            </div>
         </section>
         <section id="projects" class="section">
             <h2>Our Projects</h2>
